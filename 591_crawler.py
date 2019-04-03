@@ -4,7 +4,6 @@ import pandas as pd
 from pandas import ExcelWriter
 
 def get_web_info(url):
-    # Get a copy of the default headers that requests would use
     headers = requests.utils.default_headers()
     headers.update(
         {
@@ -58,11 +57,8 @@ def get_591_info(dom):
             data_df = pd.DataFrame(columns=column_list)
 
         else:
-            # 大部分在執行中的錯誤，interpreter會以發起exception的方式來中斷程式，但我們其實常須控制產生例外的狀況。
             try:
                 data_df.loc[str(index - 1)] = row.text.strip().split()
-            # 若發生例外，後面的error型態會有很多種，如果沒有指定except後的物件型態，則他會捕捉所有引發的物件。
-            # 像我們在程式中若發生錯誤，就會引發(raise)ValueError物件。
             except ValueError:
                 continue
     return data_df
