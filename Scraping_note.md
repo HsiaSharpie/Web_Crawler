@@ -40,11 +40,10 @@ resp = requests.post('http://www.mywebsite.com/user', data=userdata)
 
 那什麼是RESTful API呢？
 Note:
-``` bash
-REST的全稱為Representational State Transfer，他屬於一種網路架構風格，
-但他並非一種強制標準，故網站不一定要依此架構建構。
-而以REST形式打造的網頁，也就可稱為RESTful形式。
-```
+<br>REST的全稱為Representational State Transfer，他屬於一種網路架構風格，
+<br>但他並非一種強制標準，故網站不一定要依此架構建構。
+<br>而以REST形式打造的網頁，也就可稱為RESTful形式。
+<br>後續有空在為RESTful API寫個小小的筆記。
 
 3. 輕鬆將網站回傳的response進行轉換。
 
