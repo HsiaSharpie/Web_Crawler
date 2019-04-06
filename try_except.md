@@ -23,4 +23,4 @@ Note:
 
 在`requests.exceptions`下，我們可以去看看`Class RequestException`的`Source code`。
 
-![](https://i.imgur.com/PldagGO.png?1)
+![](https://i.imgur.com/PldagGO.png?1
