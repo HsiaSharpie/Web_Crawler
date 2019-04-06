@@ -23,9 +23,9 @@ Note:
 
 若請求失敗，則我們會印出失敗的原因，並回傳`None object`。而`RequestException`是一個在`requests.exceptions`下，的一個`Class`。
 
-假設我的目標是要取得這個網頁的標題，且由上面的code我可以知道我的`get request`t是否請求成功。接著，就可以透過`BeautifulSoup`去解析他了。
+假設我的目標是要取得這個網頁的標題，且由上面的code我可以知道我的`get request`是否請求成功。接著，就可以透過`BeautifulSoup`去解析他了。
 
-我們在前面遇到了可能會因為找不到頁面、連不到主機等問題而出現例外。同樣地問題，我們在透過`BeautifulSoup`解析後，也可能因為撈錯資料而發生另一種叫做`AttributeError`的例外。
+我們在前面遇到了可能會因為找不到頁面、連不到主機等問題而出現例外。同樣地問題，我們在透過`BeautifulSoup`解析後，也可能因為對不存在的資料進行處理而發生另一種叫做`AttributeError`的例外。
 
 結合上面的 get_web_page() ，把它寫成一個 get_web_title 函式。
 ```Python
