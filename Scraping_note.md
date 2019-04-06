@@ -37,3 +37,25 @@ import requests
 userdata = {"name": Jay, "number": 32}
 resp = requests.post('http://www.mywebsite.com/user', data=userdata)
 ```
+
+那什麼是RESTful API呢？
+Note:
+``` bash
+REST的全稱為Representational State Transfer，他屬於一種網路架構風格，
+但他並非一種強制標準，故網站不一定要依此架構建構。
+而以REST形式打造的網頁，也就可稱為RESTful形式。
+```
+
+3. 輕鬆將網站回傳的response進行轉換。
+
+它具有`json decoder`，故我們可用以下把response轉為json形式。
+```Python
+resp.json()
+```
+
+如果response僅是一個文字檔，我們也可把它輕鬆回傳並使用它。
+```Python
+resp.text
+```
+
+除了以上，`requests`模組對於`Session`、`cookies`等等的處理也相對簡單、方便，許多部分目前我也曾未接觸過，就留由後續等待接觸到再一一摸索。
