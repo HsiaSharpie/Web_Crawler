@@ -13,6 +13,7 @@ except requests.exceptions.RequestException as e:
 ```
 
 由以上的範例，我在try中試著對目標url發送`get request`，如果成功回傳response則我們印出它的`status code`。
+
 Note:
 ``` bash
 當status code為200時，表時請求是成功的。
