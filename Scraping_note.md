@@ -28,3 +28,12 @@ resp = requests.post('http://www.mywebsite.com/user')
 resp = requests.put('http://www.mywebsite.com/user/put')
 resp = requests.delete('http://www.mywebsite.com/user/delete')
 ```
+
+在送出`post request`時，通常會連同資料一起送出，使用`requests`模組處理的方式也相當簡單。
+
+Example:
+```Python
+import requests
+userdata = {"name": Jay, "number": 32}
+resp = requests.post('http://www.mywebsite.com/user', data=userdata)
+```
