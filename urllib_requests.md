@@ -42,7 +42,7 @@ resp = requests.post('http://www.mywebsite.com/user', data=userdata)
 
 
 那什麼是RESTful API呢？
-Note:
+<br>Note:
 <br>REST的全稱為Representational State Transfer，他屬於一種網路架構風格，
 <br>但他並非一種強制標準，故網站不一定要依此架構建構。
 <br>而以REST形式打造的網頁，也就可稱為RESTful形式。
@@ -78,7 +78,8 @@ def get_web_page(url):
   else:
     return resp.text
 ```
-以上方的方式將兩者包裝在一起，爬蟲就能仿造已通過十八歲的測試。而後面寫的if/else判斷式僅用來判斷送入的url是否為成功`requests`？
+以上方的方式將兩者包裝在一起，爬蟲就能仿造已通過十八歲的測試。
+<br>而後面寫的if/else判斷式僅用來判斷送入的url是否為成功`requests`？
 失敗了，就`return None`，成功就使用`Response 物件`中的 text 屬性回傳出來。
 <br>而`status_code`就是如同字面上的 HTTP 狀態碼，最頻繁使用的應該就是這邊的請求成功(200)與 404 Not Found。
 <br>許多部分目前我也曾未接觸過，就留由後續等待接觸到再一一摸索。
