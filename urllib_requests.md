@@ -13,7 +13,7 @@ Note:
 Example:
 ```Python
 import requests
-r = requests.get('https://api.github.com/events')
+resp = requests.get('https://api.github.com/events')
 ```
 
 由以上`Python code`，我們可以清楚知道我們發送`get request`給一個`github`網址。
@@ -23,6 +23,7 @@ r = requests.get('https://api.github.com/events')
 Example(from stackoverflow):
 ```Python
 import requests
+
 resp = requests.get('http://www.mywebsite.com/user')
 resp = requests.post('http://www.mywebsite.com/user')
 resp = requests.put('http://www.mywebsite.com/user/put')
@@ -34,9 +35,11 @@ resp = requests.delete('http://www.mywebsite.com/user/delete')
 Example:
 ```Python
 import requests
+
 userdata = {"name": Jay, "number": 32}
 resp = requests.post('http://www.mywebsite.com/user', data=userdata)
 ```
+
 
 那什麼是RESTful API呢？
 Note:
@@ -57,4 +60,25 @@ resp.json()
 resp.text
 ```
 
-除了以上，`requests`模組對於`Session`、`cookies`等等的處理也相對簡單、方便，許多部分目前我也曾未接觸過，就留由後續等待接觸到再一一摸索。
+除了以上，`requests`模組對於`Session`、`cookies`等等的處理也相對簡單、方便。
+<br>像大家經常拿ptt當作學習爬蟲的第一個練習頁面，如果你選擇的版是八卦版，第一次瀏覽時會出現「年齡是否滿十八歲」的頁面，
+<br>而此時使用`requests`搭配`cookies`就顯得相當方便。
+
+```Python
+import requests
+
+def get_web_page(url):
+  resp = requests.get(
+    url = url,
+    cookies = {'over18': '1'}
+  )
+  if resp.status_code != 200:
+    print('Invalid url:', resp.url)
+    return None
+  else:
+    return resp.text
+```
+以上方的方式將兩者包裝在一起，爬蟲就能仿造已通過十八歲的測試。而後面寫的if/else判斷式僅用來判斷送入的url是否為成功`requests`？
+失敗了，就`return None`，成功就使用`Response 物件`中的 text 屬性回傳出來。
+<br>而`status_code`就是如同字面上的 HTTP 狀態碼，最頻繁使用的應該就是這邊的請求成功(200)與 404 Not Found。
+<br>許多部分目前我也曾未接觸過，就留由後續等待接觸到再一一摸索。
