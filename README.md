@@ -3,7 +3,7 @@
 
 爬蟲小筆記:
 1. [urllib v.s. requests](https://github.com/HsiaSharpie/Web_Crawler/blob/master/urllib_requests.md)
-2. [requests-html v.s. Beautifulsoup]()
+2. [Parse HTML]()
 3. [try & except](https://github.com/HsiaSharpie/Web_Crawler/blob/master/try_except.md)
 4. [Json_in_Python]()
 
